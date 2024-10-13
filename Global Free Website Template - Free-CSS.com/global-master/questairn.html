@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Questionnaire Form</h1>
+        
+        <form>
+            <!-- Section: Who are you? -->
+            <h2>Q1. Who are you?</h2>
+            <label><input type="radio" name="role" value="student"> Student</label><br>
+            <label><input type="radio" name="role" value="education"> Education</label><br>
+            <label><input type="radio" name="role" value="entrepreneur"> Entrepreneur</label><br>
+            <label><input type="radio" name="role" value="business"> Business</label><br>
+            <label><input type="radio" name="role" value="team_hunter"> Team Hunter</label><br><br>
+
+            <!-- Section: Student -->
+            <div id="student-section" class="conditional-section">
+                <h2>Student Section</h2>
+                <label>Q1) What is your level of education?</label><br>
+                <label><input type="radio" name="education_level" value="schooling"> Schooling</label><br>
+                <label><input type="radio" name="education_level" value="highschool"> Highschool</label><br>
+                <label><input type="radio" name="education_level" value="college"> College/ University</label><br><br>
+
+                <label for="institution">Q2) Name of your Institution</label><br>
+                <input type="text" id="institution" name="institution" placeholder="Enter Institution Name"><br><br>
+            </div>
+
+            <!-- Section: Teacher -->
+            <div id="teacher-section" class="conditional-section">
+                <h2>Teacher Section</h2>
+                <label>Q1) Where do you teach at?</label><br>
+                <input type="text" name="teaching_place" placeholder="Institution Name"><br><br>
+
+                <label>Q2) Why do you need this?</label><br>
+                <select name="teacher_reason">
+                    <option value="course_material">Course Material</option>
+                    <option value="student_assessment">Student Assessment</option>
+                    <option value="resource_management">Resource Management</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+            </div>
+
+            <!-- Section: Entrepreneurship -->
+            <div id="entrepreneurship-section" class="conditional-section">
+                <h2>Entrepreneurship Section</h2>
+                <label>Q1) What role do you play?</label><br>
+                <input type="text" name="entrepreneur_role" placeholder="Enter your role"><br><br>
+
+                <label>Q2) Who are you searching for?</label><br>
+                <label><input type="radio" name="searching_for" value="interns"> Interns</label><br>
+                <label><input type="radio" name="searching_for" value="contributors"> People for Contribution</label><br>
+                <label><input type="radio" name="searching_for" value="hiring"> People for Hiring</label><br><br>
+            </div>
+
+            <!-- For All Users -->
+            <h2>For All Users</h2>
+            <label>Q2) How experienced are you with similar online tools?</label><br>
+            <select name="experience">
+                <option value="neophyte">Neophyte</option>
+                <option value="beginner">Beginner</option>
+                <option value="adept">Adept</option>
+                <option value="proficient">Proficient</option>
+                <option value="virtuoso">Virtuoso</option>
+            </select><br><br>
+
+            <label>Q3) Where did you learn about us?</label><br>
+            <select name="learn_source">
+                <option value="social_media">Social Media</option>
+                <option value="workplace">Workplace</option>
+                <option value="advertisement">Advertisement</option>
+                <option value="word_of_mouth">Word of Mouth</option>
+                <option value="search_engine">Search Engine</option>
+                <option value="referral">Referral from a Friend or Colleague</option>
+                <option value="online_community">Online Community</option>
+                <option value="industry_events">Industry Events or Conferences</option>
+                <option value="company_website">Company Website or Blog</option>
+                <option value="newsletter">Newsletter or Email Subscription</option>
+                <option value="other">Other (Please specify)</option>
+            </select><br><br>
+
+            <label>Q4) What attracted you to our online coworking space?</label><br>
+            <label><input type="checkbox" name="attraction" value="features"> Features and Amenities</label><br>
+            <label><input type="checkbox" name="attraction" value="community"> Community and Networking Opportunities</label><br>
+            <label><input type="checkbox" name="attraction" value="flexibility"> Flexibility and Convenience</label><br>
+            <label><input type="checkbox" name="attraction" value="cost"> Cost-Effectiveness</label><br>
+            <label><input type="checkbox" name="attraction" value="reputation"> Reputation and Reviews</label><br><br>
+
+            <label for="concerns">Q5) What are your concerns or questions about using our online coworking space?</label><br>
+            <textarea id="concerns" name="concerns" rows="4" cols="50" placeholder="Your concerns..."></textarea><br><br>
+
+            <label for="features">Q6) Are there any specific features or amenities you would like to see added to our online coworking space?</label><br>
+            <textarea id="features" name="features" rows="4" cols="50" placeholder="Your suggestions..."></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

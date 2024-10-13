@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Experience</title>
+    <style>
+        /* Inline CSS for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .section {
+            height: 100vh; /* Full-screen section effect */
+        }
+
+        /* Style the button */
+        #get-started {
+            padding: 10px 20px;
+            background-color: #f5cf6b;
+            color: #17212e;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        #get-started:hover {
+            background-color: #e0b954;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Page Section -->
+    <div id="home" class="section">
+        <h1>Your next interactive experience</h1>
+        <button id="get-started">Get Started</button>
+    </div>
+
+    <!-- Other Sections (Placeholder) -->
+    <div id="other1" class="section">
+        <h1>Page 2</h1>
+    </div>
+    <div id="other2" class="section">
+        <h1>Page 3</h1>
+    </div>
+    <div id="other3" class="section">
+        <h1>Page 4</h1>
+    </div>
+
+    <!-- 5th Page: Hire Page -->
+    <div id="hire" class="section">
+        <h1>Hire Page</h1>
+        <p>This is the content of the Hire Page.</p>
+    </div>
+
+    <!-- Inline JavaScript to handle button click -->
+    <script>
+        document.getElementById('get-started').addEventListener('click', function() {
+            // Scroll to the 5th page (Hire Page)
+            document.getElementById('hire').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>
